@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(https://i.pinimg.com/1200x/04/80/61/048061f03b99f20c4e02c9da368c081b.jpg);
+    text-align: center;
+    color: #201f20;
+    margin: 0;
+    padding-top: 60px; /* Відступ для меню */
+}
+p {
+    background-color: rgba(201, 151, 168, 0.8); /* Напівпрозорий пастельний фон (0.8 — рівень прозорості) */
+    padding: 2px; /* Відступи навколо тексту */
+    border-radius: 8px; /* Закруглені краї */
+    max-width: fit-content; /* Ширина буде рівною ширині тексту */
+    margin: 5px 0; /* Відступи зверху і знизу */
+
+  }
+  
+/* Навігаційне меню */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(216, 27, 96, 0.9);
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: 0.3s ease-in-out;
+    background: #d81b60;
+}
+
+.navbar ul li a:hover {
+    background: #880e4f;
+    transform: scale(1.1);
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    background: #da5887;
+    color: white;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: #fa8fc8;
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптація під телефон */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 5px 0;
+    }
+    .navbar ul li a {
+        display: block;
+        width: 80%;
+        text-align: center;
+        font-size: 16px;
+    }
+}
