@@ -1,0 +1,171 @@
+@import url('styles.css');
+
+body {
+    background: linear-gradient(to right, #fce4ec, #f8bbd0);
+}
+
+.memories {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.memories p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Анімація для плавного появи */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптація під телефон */
+@media (max-width: 600px) {
+    .memories {
+        padding: 15px;
+    }
+    .memories p {
+        font-size: 18px;
+    }
+}
+/* Стилі для навігаційного меню */
+.navbar {
+    background: #e29bb3; /* Світло-рожевий фон */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* Забезпечує, щоб кнопки залишались в рядку */
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background: #f8bbd0; /* Той самий колір, що на головній */
+    color: rgb(80, 78, 78);
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul li a:hover {
+    background: #ff80ab;
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптація для маленьких екранів */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: row; /* Кнопки залишаються в рядку */
+        justify-content: center;
+    }
+    .navbar ul li {
+        margin: 0 10px;
+    }
+    .navbar ul li a {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+}
+/* Стиль для секції пісні */
+.song {
+    background: #fce4ec; /* Світло-рожевий фон */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.song h2 {
+    font-size: 24px;
+    color: #ff80ab;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Контейнер для пісні та обкладинки */
+.song-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Обкладинка пісні */
+/* Обкладинка пісні */
+.album-cover img {
+    width: 150px; /* Розмір обкладинки */
+    height: 150px; /* Висота обкладинки */
+    object-fit: cover; /* Щоб зберегти пропорції зображення */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тінь для обкладинки */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний перехід */
+    max-width: 100%; /* Забезпечує, щоб обкладинка не виходила за межі контейнера */
+    max-height: 100%; /* Так само для висоти */
+}
+
+/* Ефект при наведенні */
+.album-cover img:hover {
+    transform: scale(1.3); /* Збільшення обкладинки на 10% */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Підсилення тіні при наведенні */
+    transform-origin: left center; /* Збільшення з лівої сторони */
+}
+
+/* Адаптація для великих екранів */
+@media (min-width: 768px) {
+    .song-container {
+        justify-content: flex-start; /* Вирівнюємо обкладинку зліва */
+    }
+}
+
+
+/* Стиль для плеєра */
+audio {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f8bbd0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптація для маленьких екранів */
+@media (max-width: 600px) {
+    .song-container {
+        gap: 13px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .song h2 {
+        font-size: 20px;
+    }
+    .album-cover img {
+        width: 120px;
+        height: 120px;
+    }
+}
